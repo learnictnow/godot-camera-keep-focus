@@ -1,10 +1,12 @@
-[gd_scene load_steps=31 format=3 uid="uid://dowvk531n4y5x"]
+[gd_scene load_steps=33 format=3 uid="uid://dowvk531n4y5x"]
 
 [ext_resource type="Script" path="res://test_level/RespawnArea.gd" id="1_l3d50"]
 [ext_resource type="PackedScene" uid="uid://c4dyfiufsjalg" path="res://test_level/Player.tscn" id="2_lj6sm"]
 [ext_resource type="PackedScene" uid="uid://b13qv3318w6fm" path="res://general/WinPoint.tscn" id="3_va26s"]
 [ext_resource type="PackedScene" uid="uid://cyhpm7iwgwmuv" path="res://EnemyAi.tscn" id="4_uw4mi"]
 [ext_resource type="PackedScene" uid="uid://cva1kcsenf7y0" path="res://PhysicsBlock.tscn" id="5_hma8r"]
+[ext_resource type="PackedScene" uid="uid://baaxlue07dhop" path="res://ball.tscn" id="6_ea1op"]
+[ext_resource type="Script" path="res://test_level/GameCamera3D.gd" id="6_eda4b"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_cklrq"]
 vertices = PackedVector3Array(-0.25, 1, 0.5, 2.25, 1, 0.5, 2.5, 1, -1, 2.5, 1, -10.5, -6.5, 1, -10.5, -6.5, 1, -1, -6.5, 1, -1, -0.5, 1, 1, -0.25, 1, 0.5, 14.25, 0, 0.5, 14.25, 0.25, 1.25, 14.5, 0.25, 2.75, 18.5, 0, 3.25, 13.75, 0, -3.25, 13.75, 0, 0.5, 14.25, 0, 0.5, 14.5, 0.25, 2.75, 14.5, 0.25, 3.25, 18.5, 0, 3.25, 18.5, 0, 3.25, 18.5, 0, -6.5, 13.75, 0, -3.25, 14.25, 0, 0.5, 9.5, 0, -6.5, 9.5, 0, -3.5, 13.75, 0, -3.25, 18.5, 0, -6.5, -0.25, 1, 7.5, -0.5, 1, 7, -0.75, 1, 8.5, 4.5, -1, 16.75, 6, -0.75, 16.5, 5.5, -0.75, 16.25, 2.75, 1, -0.5, 2.5, 1, -1, 2.25, 1, 0.5, 2.75, 1, -0.5, 2.25, 1, 0.5, 3.25, 1, 0.5, 4.5, 1, -0.5, 4.5, 3, 8.75, 4.5, -1, 16.75, 5.5, -0.75, 16.25, 5.5, 3, 8.75, 4.75, 1, 1.5, 4.5, 1, -0.5, 3.25, 1, 0.5, 3.5, 1, 2.5, 4.5, 1, 2.75, 11.5, 0.25, 8.75, 11.25, 0.25, 7.25, 5.75, 3, 7.5, 5.5, 3, 8.75, 4.5, 3, 7.25, 5.75, 3, 7.5, 5.5, 1, 2.75, 4.75, 1, 1.5, 4.5, 1, 2.75, 14.5, 0.25, 2.75, 14.25, 0.25, 1.25, 12.75, 1, 1.25, 11.25, 1, 1.5, 13.4167, 0.75, 2.33333, 9.5, 1, -2.5, 9.5, 1, -1.25, 11.5, 1, -1, 12.75, 1, -2.5, 5.5, 1, 2.75, 14.5, 0.25, 2.75, 11.25, 1, 1.5, 4.75, 1, 1.5, 11.9286, 1, 2.75, 13.4167, 0.75, 2.33333, 12.75, 1, 1.25, 12.75, 1, -2.5, 11.5, 1, -1, 11.25, 1, 1.5, 4.5, 3, 8.75, 5.5, 3, 8.75, 5.75, 3, 7.5, 4.5, 3, 7.25, -0.25, 1, 7.5, -0.75, 1, 8.5, -0.5, 1, 1, -6.5, 1, -1, -6.75, 1, -0.5, -0.75, 1, 8.5, -0.5, 1, 7, -0.5, 1, 1, -6.75, 1, -0.5, -9.5, 1, -0.5, -9.5, 1, 8.5, 9.5, 0, -0.25, 9.5, 0, 0.5, 10.5, 0, 0.5, 10.5, 0, -0.25, 11.25, 0, 6.5, 11.25, 0.25, 7.25, 11.5, 0.25, 8.75, 14.25, 0, 3.75, 9.5, 0, 3.75, 9.5, 0, 6.5, 11.25, 0, 6.5, 14.25, 0, 3.75, 11.25, 0, 9.75, 9.5, 0, 9.75, 9.5, 0, 12.75, 18.5, 0, 12.5, 14.25, 0, 3.75, 11.5, 0.25, 8.75, 11.25, 0, 9.75, 18.5, 0, 12.5, 18.5, 0, 3.25, 18.5, 0, 3.25, 14.5, 0.25, 3.25, 14.25, 0, 3.75, 6, -0.75, 16.5, 4.5, -1, 16.75, 4.5, -1, 22.5, 6.75, -1, 16.25, 6, -0.75, 16.5, 4.5, -1, 22.5, 13.5, -1, 13.75, 6.75, -1, 13.5, 6.75, -1, 16.25, 13.5, -1, 22.5, 13.5, -1, 13.75, 6.75, -1, 16.25, 4.5, -1, 22.5)
@@ -422,5 +424,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1696, 0, 21.6283)
 
 [node name="Patrol5" type="Marker3D" parent="EnemyPatrolPoints" groups=["Patrol"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.56153, 0.917049, -1.82706)
+
+[node name="GameCamera3D" type="Camera3D" parent="." node_paths=PackedStringArray("player_1", "player_2")]
+transform = Transform3D(1, 0, 0, 0, 0.112284, 0.993676, 0, -0.993676, 0.112284, 0, 19.77, 7.91809)
+script = ExtResource("6_eda4b")
+player_1 = NodePath("../Player")
+player_2 = NodePath("../EnemyAi")
+
+[node name="Ball" parent="." instance=ExtResource("6_ea1op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 6)
 
 [connection signal="body_entered" from="RespawnArea/MeshInstance3D/Area3D" to="RespawnArea" method="_on_area_3d_body_entered"]
