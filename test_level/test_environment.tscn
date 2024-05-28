@@ -420,10 +420,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.62)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41388, 0, 6.38171)
 
 [node name="Patrol3" type="Marker3D" parent="EnemyPatrolPoints" groups=["Patrol"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5679, 0, 6.38171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.01576, 0, 2.92711)
 
 [node name="Patrol4" type="Marker3D" parent="EnemyPatrolPoints" groups=["PAtrol"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1696, 0, 21.6283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3683, 0, 22.9042)
 
 [node name="Patrol5" type="Marker3D" parent="EnemyPatrolPoints" groups=["Patrol"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.56153, 0.917049, -1.82706)
