@@ -9,7 +9,7 @@ albedo_texture = ExtResource("1_dhefv")
 
 [sub_resource type="SphereMesh" id="SphereMesh_mo31p"]
 
-[node name="Ball" type="RigidBody3D"]
+[node name="Ball" type="RigidBody3D" groups=["Ball"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_pmg37")

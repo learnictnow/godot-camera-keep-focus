@@ -15,6 +15,10 @@ run/main_scene="res://test_level/test_environment.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://test_level/icon.svg"
 
+[autoload]
+
+GameManager="*res://game_manager.tscn"
+
 [input]
 
 ui_left={

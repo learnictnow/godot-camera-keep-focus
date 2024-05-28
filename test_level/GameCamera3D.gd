@@ -20,7 +20,7 @@ func _process(delta):
 	
 	var distance_between = player_1.global_position.distance_to(player_2.global_position) + offset
 	#
-	print(target_pos)
+	#print(target_pos)
 	##set_global_pos(get_global_pos().linear_interpolate(target_pos, CAMERA_SPEED * delta))
 	global_position = Vector3(target_pos.x, distance_between, target_pos.z)
 

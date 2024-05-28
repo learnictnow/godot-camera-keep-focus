@@ -1,12 +1,14 @@
-[gd_scene load_steps=33 format=3 uid="uid://dowvk531n4y5x"]
+[gd_scene load_steps=35 format=3 uid="uid://dowvk531n4y5x"]
 
 [ext_resource type="Script" path="res://test_level/RespawnArea.gd" id="1_l3d50"]
+[ext_resource type="Script" path="res://test_level/test_environment.gd" id="1_xmwxc"]
 [ext_resource type="PackedScene" uid="uid://c4dyfiufsjalg" path="res://test_level/Player.tscn" id="2_lj6sm"]
 [ext_resource type="PackedScene" uid="uid://b13qv3318w6fm" path="res://general/WinPoint.tscn" id="3_va26s"]
 [ext_resource type="PackedScene" uid="uid://cyhpm7iwgwmuv" path="res://EnemyAi.tscn" id="4_uw4mi"]
 [ext_resource type="PackedScene" uid="uid://cva1kcsenf7y0" path="res://PhysicsBlock.tscn" id="5_hma8r"]
 [ext_resource type="PackedScene" uid="uid://baaxlue07dhop" path="res://ball.tscn" id="6_ea1op"]
 [ext_resource type="Script" path="res://test_level/GameCamera3D.gd" id="6_eda4b"]
+[ext_resource type="PackedScene" uid="uid://utol3jbobwb1" path="res://goal.tscn" id="8_cejpi"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_cklrq"]
 vertices = PackedVector3Array(-0.25, 1, 0.5, 2.25, 1, 0.5, 2.5, 1, -1, 2.5, 1, -10.5, -6.5, 1, -10.5, -6.5, 1, -1, -6.5, 1, -1, -0.5, 1, 1, -0.25, 1, 0.5, 14.25, 0, 0.5, 14.25, 0.25, 1.25, 14.5, 0.25, 2.75, 18.5, 0, 3.25, 13.75, 0, -3.25, 13.75, 0, 0.5, 14.25, 0, 0.5, 14.5, 0.25, 2.75, 14.5, 0.25, 3.25, 18.5, 0, 3.25, 18.5, 0, 3.25, 18.5, 0, -6.5, 13.75, 0, -3.25, 14.25, 0, 0.5, 9.5, 0, -6.5, 9.5, 0, -3.5, 13.75, 0, -3.25, 18.5, 0, -6.5, -0.25, 1, 7.5, -0.5, 1, 7, -0.75, 1, 8.5, 4.5, -1, 16.75, 6, -0.75, 16.5, 5.5, -0.75, 16.25, 2.75, 1, -0.5, 2.5, 1, -1, 2.25, 1, 0.5, 2.75, 1, -0.5, 2.25, 1, 0.5, 3.25, 1, 0.5, 4.5, 1, -0.5, 4.5, 3, 8.75, 4.5, -1, 16.75, 5.5, -0.75, 16.25, 5.5, 3, 8.75, 4.75, 1, 1.5, 4.5, 1, -0.5, 3.25, 1, 0.5, 3.5, 1, 2.5, 4.5, 1, 2.75, 11.5, 0.25, 8.75, 11.25, 0.25, 7.25, 5.75, 3, 7.5, 5.5, 3, 8.75, 4.5, 3, 7.25, 5.75, 3, 7.5, 5.5, 1, 2.75, 4.75, 1, 1.5, 4.5, 1, 2.75, 14.5, 0.25, 2.75, 14.25, 0.25, 1.25, 12.75, 1, 1.25, 11.25, 1, 1.5, 13.4167, 0.75, 2.33333, 9.5, 1, -2.5, 9.5, 1, -1.25, 11.5, 1, -1, 12.75, 1, -2.5, 5.5, 1, 2.75, 14.5, 0.25, 2.75, 11.25, 1, 1.5, 4.75, 1, 1.5, 11.9286, 1, 2.75, 13.4167, 0.75, 2.33333, 12.75, 1, 1.25, 12.75, 1, -2.5, 11.5, 1, -1, 11.25, 1, 1.5, 4.5, 3, 8.75, 5.5, 3, 8.75, 5.75, 3, 7.5, 4.5, 3, 7.25, -0.25, 1, 7.5, -0.75, 1, 8.5, -0.5, 1, 1, -6.5, 1, -1, -6.75, 1, -0.5, -0.75, 1, 8.5, -0.5, 1, 7, -0.5, 1, 1, -6.75, 1, -0.5, -9.5, 1, -0.5, -9.5, 1, 8.5, 9.5, 0, -0.25, 9.5, 0, 0.5, 10.5, 0, 0.5, 10.5, 0, -0.25, 11.25, 0, 6.5, 11.25, 0.25, 7.25, 11.5, 0.25, 8.75, 14.25, 0, 3.75, 9.5, 0, 3.75, 9.5, 0, 6.5, 11.25, 0, 6.5, 14.25, 0, 3.75, 11.25, 0, 9.75, 9.5, 0, 9.75, 9.5, 0, 12.75, 18.5, 0, 12.5, 14.25, 0, 3.75, 11.5, 0.25, 8.75, 11.25, 0, 9.75, 18.5, 0, 12.5, 18.5, 0, 3.25, 18.5, 0, 3.25, 14.5, 0.25, 3.25, 14.25, 0, 3.75, 6, -0.75, 16.5, 4.5, -1, 16.75, 4.5, -1, 22.5, 6.75, -1, 16.25, 6, -0.75, 16.5, 4.5, -1, 22.5, 13.5, -1, 13.75, 6.75, -1, 13.5, 6.75, -1, 16.25, 13.5, -1, 22.5, 13.5, -1, 13.75, 6.75, -1, 16.25, 4.5, -1, 22.5)
@@ -86,6 +88,7 @@ albedo_color = Color(1, 0, 0, 1)
 size = Vector3(75, 1, 75)
 
 [node name="TestEnvironment" type="Node3D"]
+script = ExtResource("1_xmwxc")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_cklrq")
@@ -434,4 +437,45 @@ player_2 = NodePath("../EnemyAi")
 [node name="Ball" parent="." instance=ExtResource("6_ea1op")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 6)
 
+[node name="Goal" parent="." instance=ExtResource("8_cejpi")]
+transform = Transform3D(-3.6669, 0, 1.59807, 0, 4, 0, -1.59807, 0, -3.6669, 16.3195, 1, -5.23495)
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="GridContainer" type="GridContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_right = 76.0
+offset_bottom = 40.0
+grow_horizontal = 2
+columns = 5
+
+[node name="Label" type="Label" parent="HUD/GridContainer"]
+layout_mode = 2
+text = "Blue"
+
+[node name="LabelBlueScore" type="Label" parent="HUD/GridContainer"]
+layout_mode = 2
+text = "#"
+
+[node name="Label5" type="Label" parent="HUD/GridContainer"]
+layout_mode = 2
+text = "vs"
+
+[node name="LabelRedScore" type="Label" parent="HUD/GridContainer"]
+layout_mode = 2
+text = "#"
+
+[node name="Label3" type="Label" parent="HUD/GridContainer"]
+layout_mode = 2
+text = "Red"
+
 [connection signal="body_entered" from="RespawnArea/MeshInstance3D/Area3D" to="RespawnArea" method="_on_area_3d_body_entered"]
+[connection signal="score" from="Goal" to="." method="_on_goal_score"]
